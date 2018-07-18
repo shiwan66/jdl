@@ -115,3 +115,46 @@ entity SysClient {
 	/** 修改用户名 */
 	ModiUserName String
 }
+
+entity SysDepartment {
+	/** 部门主键 */
+	DepartmentId String
+	/** 公司主键 */
+	CompanyId String
+	/** 父级代码 */
+	ParentId String
+	/** 部门代码 */
+	EnCode String
+	/** 部门简称 */
+	ShortName String
+	/** 部门全称 */
+	FullName String
+	/** 区县主键 */
+	CountyId String
+	/** 负责人 */
+	Manager String
+	/** 联系电话 */
+	Tel String
+	/** 传真 */
+	Fax String
+	/** 邮箱 */
+	Email String
+	/** 删除标记 */
+	DelMark String
+	/** 有效标记 */
+	EnableMark String
+	/** 备注 */
+	Description String
+	/** 创建日期 */
+	CreateDate String
+	/** 创建用户主键 */
+	CreateUserId String
+	/** 创建用户名 */
+	CreateUserName String
+	/** 修改日期 */
+	ModiDate String
+	/** 修改用户主键 */
+	ModiUserId String
+	/** 修改用户名 */
+	ModiUserName String
+}
