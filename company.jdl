@@ -93,7 +93,7 @@ entity SysClient {
 	/** 排污许可证编码 */
 	SDPNo String
 	/** 排污口信息 */
-	SDEInfo
+	SDEInfo String
 	/** 企业状态 */
 	CompanyState String
 	/** 删除标记 */
