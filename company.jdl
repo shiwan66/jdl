@@ -1,249 +1,239 @@
 entity SysCompany {	
-	/** 公司主键*/
-	TCompanyId String 
 	/** 公司代码 */
-    TEnCode String 
+    EnCode String, 
 	/** 公司简称*/
-    TShortName String 
+    ShortName String,  
 	/**公司全称*/
-    TFullName String 
+    FullName String,  
 	/**省主键*/
-    TProvinceId String 
+    ProvinceId String,  
 	/**市主键*/
-    TCityId String 
+    CityId String,  
 	/**区县主键*/
-    TCountyId String 
+    CountyId String,  
 	/**联系人*/
-    TContact String 
+    Contact String,  
 	/**联系电话*/
-    TTel String 
+    Tel String,  
 	/**传真*/
-    TFax String 
+    Fax String,  
 	/** 邮箱*/
-	TEmail	String
+	Email	String, 
 	/** 邮编*/
-	TZip String
+	Zip String, 
 	/** 详细地址*/
-	TAddress String
+	Address String, 
 	/** 网址*/
-	TWebAddress String
+	WebAddress String, 
 	/**	开户行*/
-	TOpeningBank String
+	OpeningBank String, 
 	/** 账号*/
-	TAccountNo	String
+	AccountNo	String, 
 	/** 税号*/
-	TTaxNo String
+	TaxNo String, 
 	/**	删除标记*/
-	TDelMark String
+	DelMark String, 
 	/** 有效标记*/
-	TEnableMark String
+	EnableMark String, 
 	/** 备注*/
-	TDescription String
+	Description String, 
 	/**	创建日期*/
-	TCreateDate String
+	CreateDate String, 
 	/** 创建用户主键*/
-	TCreateUserId String
+	CreateUserId String, 
 	/** 创建用户名*/
-	TCreateUserName String
+	CreateUserName String, 
 	/**	修改日期*/
-	TModiDate String
+	ModiDate String, 
 	/** 修改用户主键*/
-	TModiUserId String
+	ModiUserId String, 
 	/** 修改用户名*/
-	TModiUserName String
-}
-
-entity SysClient {
-	/** 公司主键 */
-	CustomerId  String
-	/** 公司代码 */
-	EnCode String
-	/** 公司简称 */
-	ShortName String
-	/** 公司全称 */
-	FullName String
-	/** 省主键 */
-	ProvinceId String
-	/** 市主键 */
-	CityId String
-	/** 区县主键 */
-	CountyId String
-	/** 联系人 */
-	Contact String
-	/** 联系电话 */
-	Tel String
-	/** 传真 */
-	Fax String
-	/** 邮箱 */
-	Email String
-	/** 邮编 */
-	Zip String
-	/** 详细地址 */
-	Address String
-	/** 网址 */
-	WebAddress String
-	/** 开户行 */
-	OpeningBank String
-	/** 账号 */
-	AccountNo String
-	/** 税号 */
-	TaxNo String
-	/** 污染源编码 */
-	PolluterNo String
-	/** 排污许可证编码 */
-	SDPNo String
-	/** 排污口信息 */
-	SDEInfo String
-	/** 企业状态 */
-	CompanyState String
-	/** 删除标记 */
-	DelMark String
-	/** 有效标记 */
-	EnableMark String
-	/** 备注 */
-	Description String
-	/** 创建日期 */
-	CreateDate String
-	/** 创建用户主键 */
-	CreateUserId String
-	/** 创建用户名 */
-	CreateUserName String
-	/** 修改日期 */
-	ModiDate String
-	/** 修改用户主键 */
-	ModiUserId String
-	/** 修改用户名 */
 	ModiUserName String
 }
 
-entity SysDepartment {
-	/** 部门主键 */
-	DepartmentId String
-	/** 公司主键 */
-	CompanyId String
-	/** 父级代码 */
-	ParentId String
-	/** 部门代码 */
-	EnCode String
-	/** 部门简称 */
-	ShortName String
-	/** 部门全称 */
-	FullName String
+entity SysClient {
+	/** 公司代码 */
+	EnCode String, 
+	/** 公司简称 */
+	ShortName String, 
+	/** 公司全称 */
+	FullName String, 
+	/** 省主键 */
+	ProvinceId String, 
+	/** 市主键 */
+	CityId String, 
 	/** 区县主键 */
-	CountyId String
-	/** 负责人 */
-	Manager String
+	CountyId String, 
+	/** 联系人 */
+	Contact String, 
 	/** 联系电话 */
-	Tel String
+	Tel String, 
 	/** 传真 */
-	Fax String
+	Fax String, 
 	/** 邮箱 */
-	Email String
+	Email String, 
+	/** 邮编 */
+	Zip String, 
+	/** 详细地址 */
+	Address String, 
+	/** 网址 */
+	WebAddress String, 
+	/** 开户行 */
+	OpeningBank String, 
+	/** 账号 */
+	AccountNo String, 
+	/** 税号 */
+	TaxNo String, 
+	/** 污染源编码 */
+	PolluterNo String, 
+	/** 排污许可证编码 */
+	SDPNo String, 
+	/** 排污口信息 */
+	SDEInfo String, 
+	/** 企业状态 */
+	CompanyState String, 
 	/** 删除标记 */
-	DelMark String
+	DelMark String, 
 	/** 有效标记 */
-	EnableMark String
+	EnableMark String, 
 	/** 备注 */
-	Description String
+	Description String, 
 	/** 创建日期 */
-	CreateDate String
+	CreateDate String, 
 	/** 创建用户主键 */
-	CreateUserId String
+	CreateUserId String, 
 	/** 创建用户名 */
-	CreateUserName String
+	CreateUserName String, 
 	/** 修改日期 */
-	ModiDate String
+	ModiDate String, 
 	/** 修改用户主键 */
-	ModiUserId String
+	ModiUserId String, 
+	/** 修改用户名 */
+	ModiUserName String 
+}
+
+entity SysDepartment {
+	/** 公司主键 */
+	CompanyId String, 
+	/** 父级代码 */
+	ParentId String, 
+	/** 部门代码 */
+	EnCode String, 
+	/** 部门简称 */
+	ShortName String, 
+	/** 部门全称 */
+	FullName String, 
+	/** 区县主键 */
+	CountyId String, 
+	/** 负责人 */
+	Manager String, 
+	/** 联系电话 */
+	Tel String, 
+	/** 传真 */
+	Fax String, 
+	/** 邮箱 */
+	Email String, 
+	/** 删除标记 */
+	DelMark String, 
+	/** 有效标记 */
+	EnableMark String, 
+	/** 备注 */
+	Description String, 
+	/** 创建日期 */
+	CreateDate String, 
+	/** 创建用户主键 */
+	CreateUserId String, 
+	/** 创建用户名 */
+	CreateUserName String, 
+	/** 修改日期 */
+	ModiDate String, 
+	/** 修改用户主键 */
+	ModiUserId String, 
 	/** 修改用户名 */
 	ModiUserName String
 }
 
 entity SysPost {
-    /** 岗位主键 */
-	PostId String
     /** 部门主键 */
-	DepartmentId String
+	DepartmentId String, 
     /** 公司主键 */
-	CompanyId String
+	CompanyId String, 
     /** 父级代码 */
-	ParentId String
+	ParentId String, 
     /** 岗位代码 */
-	EnCode String
+	EnCode String, 
     /** 岗位全称 */
-	FullName String
+	FullName String, 
     /** 删除标记 */
-	DelMark String
+	DelMark String, 
     /** 有效标记 */
-	EnableMark String
+	EnableMark String, 
     /** 备注 */
-	Description String
+	Description String, 
     /** 创建日期 */
-	CreateDate String
+	CreateDate String, 
     /** 创建用户主键 */
-	CreateUserId String
+	CreateUserId String, 
     /** 创建用户名 */
-	CreateUserName String
+	CreateUserName String, 
     /** 修改日期 */
-	ModiDate String
+	ModiDate String, 
     /** 修改用户主键 */
-	ModiUserId String
+	ModiUserId String, 
     /** 修改用户名 */
 	ModiUserName String
 }
 
 entity SysRole {
-    /** 角色主键 */
-	RoleId String
     /** 角色分类 */
-	Category String
+	Category String, 
     /** 角色代码 */
-	EnCode String
+	EnCode String, 
     /** 角色全称 */
-	FullName String
+	FullName String, 
     /** 删除标记 */
-	DelMark String
+	DelMark String, 
     /** 有效标记 */
-	EnableMark String
+	EnableMark String, 
     /** 备注 */
-	Description String
+	Description String, 
     /** 创建日期 */
-	CreateDate String
+	CreateDate String, 
     /** 创建用户主键 */
-	CreateUserId String
+	CreateUserId String, 
     /** 创建用户名 */
-	CreateUserName String
+	CreateUserName String, 
     /** 修改日期 */
-	ModiDate String
+	ModiDate String, 
     /** 修改用户主键 */
-	ModiUserId String
+	ModiUserId String, 
     /** 修改用户名 */
-	ModiUserName String	
+	ModiUserName String
 }
 
 entity SysUser {
     /** 允许登录结束时间 */
-	AllowEndTime String
+	AllowEndTime String, 
     /** 暂停用户开始时间 */
-	LockStartTime String
+	LockStartTime String, 
     /** 暂停用户结束时间 */
-	LockEndTime String
+	LockEndTime String, 
     /** 删除标记 */
-	DelMark String
+	DelMark String, 
     /** 有效标记 */
-	EnableMark String
+	EnableMark String, 
     /** 备注 */
-	Description String
+	Description String, 
     /** 创建日期 */
-	CreateDate String
+	CreateDate String, 
     /** 创建用户主键 */
-	CreateUserId String
+	CreateUserId String, 
     /** 创建用户名 */
-	CreateUserName String
+	CreateUserName String, 
     /** 修改日期 */
-	ModiDate String
+	ModiDate String, 
     /** 修改用户主键 */
-	ModiUserId String
+	ModiUserId String, 
     /** 修改用户名 */
 	ModiUserName String
 }
