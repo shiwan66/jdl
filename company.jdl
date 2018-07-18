@@ -1,3 +1,6 @@
+/**
+ * 公司表
+ */
 entity SysCompany {	
 	/** 公司代码 */
     EnCode String, 
@@ -51,6 +54,9 @@ entity SysCompany {
 	ModiUserName String
 }
 
+/**
+ * 客户表
+ */
 entity SysClient {
 	/** 公司代码 */
 	EnCode String, 
@@ -112,6 +118,9 @@ entity SysClient {
 	ModiUserName String 
 }
 
+/**
+ * 部门表
+ */
 entity SysDepartment {
 	/** 公司主键 */
 	CompanyId String, 
@@ -153,6 +162,9 @@ entity SysDepartment {
 	ModiUserName String
 }
 
+/**
+ * 岗位表
+ */
 entity SysPost {
     /** 部门主键 */
 	DepartmentId String, 
@@ -184,6 +196,9 @@ entity SysPost {
 	ModiUserName String
 }
 
+/**
+ * 角色表
+ */
 entity SysRole {
     /** 角色分类 */
 	Category String, 
@@ -211,29 +226,29 @@ entity SysRole {
 	ModiUserName String
 }
 
-entity SysUser {
-    /** 允许登录结束时间 */
-	AllowEndTime String, 
-    /** 暂停用户开始时间 */
-	LockStartTime String, 
-    /** 暂停用户结束时间 */
-	LockEndTime String, 
-    /** 删除标记 */
-	DelMark String, 
-    /** 有效标记 */
-	EnableMark String, 
-    /** 备注 */
-	Description String, 
-    /** 创建日期 */
-	CreateDate String, 
-    /** 创建用户主键 */
-	CreateUserId String, 
-    /** 创建用户名 */
-	CreateUserName String, 
-    /** 修改日期 */
-	ModiDate String, 
-    /** 修改用户主键 */
-	ModiUserId String, 
-    /** 修改用户名 */
-	ModiUserName String
-}
+// entity SysUser {
+//     /** 允许登录结束时间 */
+// 	AllowEndTime String, 
+//     /** 暂停用户开始时间 */
+// 	LockStartTime String, 
+//     /** 暂停用户结束时间 */
+// 	LockEndTime String, 
+//     /** 删除标记 */
+// 	DelMark String, 
+//     /** 有效标记 */
+// 	EnableMark String, 
+//     /** 备注 */
+// 	Description String, 
+//     /** 创建日期 */
+// 	CreateDate String, 
+//     /** 创建用户主键 */
+// 	CreateUserId String, 
+//     /** 创建用户名 */
+// 	CreateUserName String, 
+//     /** 修改日期 */
+// 	ModiDate String, 
+//     /** 修改用户主键 */
+// 	ModiUserId String, 
+//     /** 修改用户名 */
+// 	ModiUserName String
+// }
