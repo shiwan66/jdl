@@ -203,40 +203,45 @@ entity SysPost {
 }
 relationship OneToMany {
 	SysCompany to SysPost{sysCompanyId(ShortName)},
-	SysDepartment to SysPost{sysDepartmentId(ShortName)},
+	SysDepartment to SysPost{sysDepartmentId(ShortName)}
+}
+relationship OneToOne {
 	SysPost to SysPost{parentId(FullName)}
 }
 
-/**
- * 角色表
- */
-entity SysRole {
-    /** 角色分类 */
-	Category String, 
-    /** 角色代码 */
-	EnCode String, 
-    /** 角色全称 */
-	FullName String, 
-    /** 删除标记 */
-	DelMark String, 
-    /** 有效标记 */
-	EnableMark String, 
-    /** 备注 */
-	Description String, 
-    /** 创建日期 */
-	CreateDate String, 
-    /** 创建用户主键 */
-	CreateUserId String, 
-    /** 创建用户名 */
-	CreateUserName String, 
-    /** 修改日期 */
-	ModiDate String, 
-    /** 修改用户主键 */
-	ModiUserId String, 
-    /** 修改用户名 */
-	ModiUserName String
-}
+// /**
+//  * 角色表
+//  */
+// entity SysRole {
+//     /** 角色分类 */
+// 	Category String, 
+//     /** 角色代码 */
+// 	EnCode String, 
+//     /** 角色全称 */
+// 	FullName String, 
+//     /** 删除标记 */
+// 	DelMark String, 
+//     /** 有效标记 */
+// 	EnableMark String, 
+//     /** 备注 */
+// 	Description String, 
+//     /** 创建日期 */
+// 	CreateDate String, 
+//     /** 创建用户主键 */
+// 	CreateUserId String, 
+//     /** 创建用户名 */
+// 	CreateUserName String, 
+//     /** 修改日期 */
+// 	ModiDate String, 
+//     /** 修改用户主键 */
+// 	ModiUserId String, 
+//     /** 修改用户名 */
+// 	ModiUserName String
+// }
 
+// /**
+//  * 角色关系表
+//  */
 // entity SysUser {
 //     /** 允许登录结束时间 */
 // 	AllowEndTime String, 
