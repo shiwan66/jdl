@@ -1,0 +1,55 @@
+entity SysCompany {	
+	/** 公司主键*/
+	TCompanyId String 
+	/** 公司代码 */
+    TEnCode String 
+	/** 公司简称*/
+    TShortName String 
+	/**公司全称*/
+    TFullName String 
+	/**省主键*/
+    TProvinceId String 
+	/**市主键*/
+    TCityId String 
+	/**区县主键*/
+    TCountyId String 
+	/**联系人*/
+    TContact String 
+	/**联系电话*/
+    TTel String 
+	/**传真*/
+    TFax String 
+	/** 邮箱*/
+	TEmail	String
+	/** 邮编*/
+	TZip String
+	/** 详细地址*/
+	TAddress String
+	/** 网址*/
+	TWebAddress String
+	/**	开户行*/
+	TOpeningBank String
+	/** 账号*/
+	TAccountNo	String
+	/** 税号*/
+	TTaxNo String
+	/**	删除标记*/
+	TDelMark String
+	/** 有效标记*/
+	TEnableMark String
+	/** 备注*/
+	TDescription String
+	/**	创建日期*/
+	TCreateDate String
+	/** 创建用户主键*/
+	TCreateUserId String
+	/** 创建用户名*/
+	TCreateUserName String
+	/**	修改日期*/
+	TModiDate String
+	/** 修改用户主键*/
+	TModiUserId String
+	/** 修改用户名*/
+	TModiUserName String
+}
+
