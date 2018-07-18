@@ -162,7 +162,7 @@ entity SysDepartment {
 	ModiUserName String
 }
 relationship OneToMany {
-	SysCompany to SysDepartment{sysCompany(ShortName)}
+	SysCompany to SysDepartment{sysCompanyId(ShortName)}
 }
 relationship OneToOne {
 	SysDepartment to SysDepartment{parentId(ShortName)}
@@ -172,34 +172,39 @@ relationship OneToOne {
  * 岗位表
  */
 entity SysPost {
-    /** 部门主键 */
-	DepartmentId String, 
-    /** 公司主键 */
-	CompanyId String, 
-    /** 父级代码 */
-	ParentId String, 
+    // /** 部门主键 */
+	// DepartmentId String, 
+    // /** 公司主键 */
+	// CompanyId String, 
+    // /** 父级代码 */
+	// ParentId String, 
     /** 岗位代码 */
 	EnCode String, 
     /** 岗位全称 */
 	FullName String, 
     /** 删除标记 */
-	DelMark String, 
+	DelMark Boolean, 
     /** 有效标记 */
-	EnableMark String, 
+	EnableMark Boolean, 
     /** 备注 */
 	Description String, 
     /** 创建日期 */
-	CreateDate String, 
+	CreateDate LocalDate, 
     /** 创建用户主键 */
-	CreateUserId String, 
+	CreateUserId Integer, 
     /** 创建用户名 */
 	CreateUserName String, 
     /** 修改日期 */
-	ModiDate String, 
+	ModiDate LocalDate, 
     /** 修改用户主键 */
-	ModiUserId String, 
+	ModiUserId Integer, 
     /** 修改用户名 */
 	ModiUserName String
+}
+relationship OneToMany {
+	SysCompany to SysPost{sysCompanyId(ShortName)},
+	SysDepartment to SysPost{sysDepartmentId(ShortName)},
+	SysPost to SysPost{parentId(FullName)}
 }
 
 /**
