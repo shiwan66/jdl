@@ -5,12 +5,12 @@ entity SysCompany {
     ShortName String,  
 	/**公司全称*/
     FullName String,  
-	/**省主键*/
-    ProvinceId String,  
-	/**市主键*/
-    CityId String,  
-	/**区县主键*/
-    CountyId String,  
+	// /**省主键*/
+    // ProvinceId String,  
+	// /**市主键*/
+    // CityId String,  
+	// /**区县主键*/
+    // CountyId String,  
 	/**联系人*/
     Contact String,  
 	/**联系电话*/
@@ -18,7 +18,7 @@ entity SysCompany {
 	/**传真*/
     Fax String,  
 	/** 邮箱*/
-	Email	String, 
+	Email String, 
 	/** 邮编*/
 	Zip String, 
 	/** 详细地址*/
@@ -28,25 +28,25 @@ entity SysCompany {
 	/**	开户行*/
 	OpeningBank String, 
 	/** 账号*/
-	AccountNo	String, 
+	AccountNo String, 
 	/** 税号*/
 	TaxNo String, 
 	/**	删除标记*/
-	DelMark String, 
+	DelMark Boolean, 
 	/** 有效标记*/
-	EnableMark String, 
+	EnableMark Boolean, 
 	/** 备注*/
 	Description String, 
 	/**	创建日期*/
-	CreateDate String, 
+	CreateDate LocalDate, 
 	/** 创建用户主键*/
-	CreateUserId String, 
+	CreateUserId Integer, 
 	/** 创建用户名*/
 	CreateUserName String, 
 	/**	修改日期*/
-	ModiDate String, 
+	ModiDate LocalDate, 
 	/** 修改用户主键*/
-	ModiUserId String, 
+	ModiUserId Integer, 
 	/** 修改用户名*/
 	ModiUserName String
 }
