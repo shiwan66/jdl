@@ -158,3 +158,36 @@ entity SysDepartment {
 	/** 修改用户名 */
 	ModiUserName String
 }
+
+entity SysPost {
+    /** 岗位主键 */
+	PostId String
+    /** 部门主键 */
+	DepartmentId String
+    /** 公司主键 */
+	CompanyId String
+    /** 父级代码 */
+	ParentId String
+    /** 岗位代码 */
+	EnCode String
+    /** 岗位全称 */
+	FullName String
+    /** 删除标记 */
+	DelMark String
+    /** 有效标记 */
+	EnableMark String
+    /** 备注 */
+	Description String
+    /** 创建日期 */
+	CreateDate String
+    /** 创建用户主键 */
+	CreateUserId String
+    /** 创建用户名 */
+	CreateUserName String
+    /** 修改日期 */
+	ModiDate String
+    /** 修改用户主键 */
+	ModiUserId String
+    /** 修改用户名 */
+	ModiUserName String
+}
