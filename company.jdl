@@ -124,9 +124,9 @@ entity SysClient {
 entity SysDepartment {
 	// /** 公司主键 */
 	// CompanyId String, 
-	/** 父级代码 */
+	// /** 父级Id */
 	// ParentId String, 
-	// /** 部门代码 */
+	/** 部门代码 */
 	EnCode String, 
 	/** 部门简称 */
 	ShortName String, 
@@ -162,10 +162,10 @@ entity SysDepartment {
 	ModiUserName String
 }
 relationship OneToMany {
-	SysCompany to SysDepartment{sysCompanyId(ShortName)}
+	SysCompany{sysDepartment} to SysDepartment{sysCompanyId(ShortName)}
 }
 relationship OneToOne {
-	SysDepartment to SysDepartment{parentId(ShortName)}
+	SysDepartment{parentId(ShortName)} to SysDepartment
 }
 
 /**
@@ -176,7 +176,7 @@ entity SysPost {
 	// DepartmentId String, 
     // /** 公司主键 */
 	// CompanyId String, 
-    // /** 父级代码 */
+    // /** 父级Id */
 	// ParentId String, 
     /** 岗位代码 */
 	EnCode String, 
@@ -202,12 +202,13 @@ entity SysPost {
 	ModiUserName String
 }
 relationship OneToMany {
-	SysCompany to SysPost{sysCompanyId(ShortName)},
-	SysDepartment to SysPost{sysDepartmentId(ShortName)}
+	SysCompany{sysPost} to SysPost{sysCompanyId(ShortName)},
+	SysDepartment{sysPost} to SysPost{sysDepartmentId(ShortName)}
 }
 relationship OneToOne {
-	SysPost to SysPost{parentId(FullName)}
+	SysPost{parentId(FullName)} to SysPost
 }
+
 
 // /**
 //  * 角色表
