@@ -122,18 +122,18 @@ entity SysClient {
  * 部门表
  */
 entity SysDepartment {
-	/** 公司主键 */
-	CompanyId String, 
+	// /** 公司主键 */
+	// CompanyId String, 
 	/** 父级代码 */
-	ParentId String, 
-	/** 部门代码 */
+	// ParentId String, 
+	// /** 部门代码 */
 	EnCode String, 
 	/** 部门简称 */
 	ShortName String, 
 	/** 部门全称 */
 	FullName String, 
-	/** 区县主键 */
-	CountyId String, 
+	// /** 区县主键 */
+	// CountyId String, 
 	/** 负责人 */
 	Manager String, 
 	/** 联系电话 */
@@ -143,23 +143,29 @@ entity SysDepartment {
 	/** 邮箱 */
 	Email String, 
 	/** 删除标记 */
-	DelMark String, 
+	DelMark Boolean, 
 	/** 有效标记 */
-	EnableMark String, 
+	EnableMark Boolean, 
 	/** 备注 */
 	Description String, 
 	/** 创建日期 */
-	CreateDate String, 
+	CreateDate LocalDate, 
 	/** 创建用户主键 */
-	CreateUserId String, 
+	CreateUserId Integer, 
 	/** 创建用户名 */
 	CreateUserName String, 
 	/** 修改日期 */
-	ModiDate String, 
+	ModiDate LocalDate, 
 	/** 修改用户主键 */
-	ModiUserId String, 
+	ModiUserId Integer, 
 	/** 修改用户名 */
 	ModiUserName String
+}
+relationship OneToMany {
+	SysCompany to SysDepartment{sysCompany(ShortName)}
+}
+relationship OneToOne {
+	SysDepartment to SysDepartment{parentId(ShortName)}
 }
 
 /**
